@@ -5,20 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TecLine Assistência Técnica</title>
-    <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
     <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
         <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
-            <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+            <img src="/img/logoTL.svg" alt="logoTL" width="50" height="32" tittle="TecLine">
             <span class="fs-4">TecLine</span>
         </a>
 
         <ul class="nav nav-pills">
             <li class="nav-item"><a href="/" class="nav-link" aria-current="page">Home</a></li>
             <li class="nav-item"><a href="/services" class="nav-link">Serviços</a></li>
-            <li class="nav-item"><a href="/requestService" class="nav-link active">Solicitar Orçamento</a></li>
+            <li class="nav-item"><a href="/requestService" class="nav-link active">Solicitar Serviço</a></li>
             <li class="nav-item"><a href="/contact" class="nav-link">Contato</a></li>
             <li class="nav-item"><a href="/about" class="nav-link">Sobre</a></li>
         </ul>
@@ -26,26 +26,40 @@
 
 
     <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <h2>Solicitar Serviço</h2>
+                <p>Por favor, informe os dados abaixo para que possamos entrar em contato</p>
+            </div>
 
-        <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="floatingInput" placeholder="Nome Completo" name="nameInput" required>
-            <label for="floatingInput">Nome Completo</label>
+            <div class="card-body">
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="floatingInput" placeholder="Nome Completo" name="nameInput" required>
+                    <label for="floatingInput">Nome Completo</label>
+                </div>
+        
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="floatingInput" placeholder="Número" name="numberInput" required>
+                    <label for="floatingInput">Número</label>
+                </div>
+        
+                <div class="form-floating mb-3">
+                    <input type="email" class="form-control" id="floatingInput" placeholder="Email" name="emailInput" required>
+                    <label for="floatingInput">Email</label>
+                </div>
+        
+                <div class="form-floating mb-3">
+                    <textarea type="text" class="form-control" id="descriptionInput" placeholder="Descrição" rows="3" name="descriptionInput" required></textarea>
+                    <label for="floatingInput">Descrição</label>
+                </div>
+
+                <div class="containe mb-3" align="center">
+                    <button type="button" class="btn btn-primary">Enviar</button>
+                </div>
+            </div>
         </div>
 
-        <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="floatingInput" placeholder="Número" name="numberInput" required>
-            <label for="floatingInput">Número</label>
-        </div>
 
-        <div class="form-floating mb-3">
-            <input type="email" class="form-control" id="floatingInput" placeholder="Email" name="emailInput" required>
-            <label for="floatingInput">Email</label>
-        </div>
-
-        <div class="form-floating mb-3">
-            <textarea type="text" class="form-control" id="descriptionInput" placeholder="Descrição" rows="3" name="descriptionInput" required></textarea>
-            <label for="floatingInput">Descrição</label>
-        </div>
 
         <!--<div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Nome Completo</label>
@@ -60,9 +74,7 @@
             <input type="text" class="form-control" id="emailInput" placeholder="meuemail@exemplo.com">
         </div>-->
 
-        <div class="containe mb-3" align="center">
-            <button type="button" class="btn btn-primary">Enviar</button>
-        </div>
+
         
         <h1>Página de requisição de serviço</h1>
     </div>
