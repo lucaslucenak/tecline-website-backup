@@ -3,8 +3,28 @@ const express = require('express');
 const app = express();
 //EJS import
 const ejs = require('ejs');
+//BodyParser import
+const bodyParser = require('body-parser');
+//DataBase connection
+const connection = require('./database/database');
+//Models import
+const serviceSolicitation = require('./database/ServiceSolicitation');
+
+/*connection
+    .authenticate()
+    .then(() => {
+        console.log('Banco conectado')
+    }).catch((err) => {
+        console.log('Erro na conexao do banco: ' + err)
+    })*/
 
 //Config
+    //BodyParser
+    app.use(bodyParser.urlencoded({ extended: false}));
+    app.use(bodyParser.json());
+    app.use(bodyParser.raw());
+    app.use(bodyParser.text());
+
     //View Engine
     app.set('view engine', 'ejs');
     app.use(express.static('public')); //Aceita arquivos estáticos
@@ -17,6 +37,16 @@ app.get("/", (req, res) => {
 app.get('/requestService', (req, res) => {
     res.render('requestService.ejs');
 });
+
+app.post('/saveServiceRequest', (req, res) => {
+    //Getting form inputs
+    var nameInput = req.body.nameInput;
+    var numberInput = req.body.numberInput;
+    var emailInput = req.body.emailInput;
+    var descriptionInput = req.body.descriptionInput;
+
+    res.send("FORM reseceibod" + nameInput + numberInput + emailInput + descriptionInput);
+})
 
 app.get('/services', (req, res) => {
     res.render('services.ejs');

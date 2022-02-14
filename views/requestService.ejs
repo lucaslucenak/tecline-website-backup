@@ -25,31 +25,36 @@
                     required form group has a validation state that can be triggered by attempting to submit the
                     form without completing it.</p>
             </div>
+            <form class="row g-3 needs-validation" method="POST" action="/saveServiceRequest">
 
-            <div class="card-body">
-                <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="floatingInput" placeholder="Nome Completo" name="nameInput" required>
-                    <label for="floatingInput">Nome Completo</label>
-                </div>
-        
-                <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="floatingInput" placeholder="Número" name="numberInput" required>
-                    <label for="floatingInput">Número</label>
-                </div>
-        
-                <div class="form-floating mb-3">
-                    <input type="email" class="form-control" id="floatingInput" placeholder="Email" name="emailInput" required>
-                    <label for="floatingInput">Email</label>
-                </div>
-        
-                <div class="form-floating mb-3">
-                    <textarea type="text" class="form-control" id="descriptionInput" placeholder="Descrição" rows="3" name="descriptionInput" required></textarea>
-                    <label for="floatingInput">Descrição</label>
-                </div>
+                <div class="card-body">
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="Nome Completo" name="nameInput" required>
+                        <label for="floatingInput">Nome</label>
+                    </div>
+            
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="Número" name="numberInput" required>
+                        <label for="floatingInput">Número</label>
+                    </div>
+            
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" id="floatingInput" placeholder="Email" name="emailInput" required>
+                        <label for="floatingInput">Email</label>
+                    </div>
+            
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="descriptionInput" placeholder="Descrição" name="descriptionInput" required>
+                        <label for="floatingInput">Descrição</label>
+                    </div>
+    
+                    <div class="containe mb-3" align="center">
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </div>
 
-                <div class="containe mb-3" align="center">
-                    <button type="button" class="btn btn-primary">Enviar</button>
-                </div>
+            </form>
+
+
             </div>
         </div>
     </div>
