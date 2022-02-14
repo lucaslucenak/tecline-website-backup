@@ -45,7 +45,14 @@ app.post('/saveServiceRequest', (req, res) => {
     var emailInput = req.body.emailInput;
     var descriptionInput = req.body.descriptionInput;
 
-    res.send("FORM reseceibod" + nameInput + numberInput + emailInput + descriptionInput);
+    serviceSolicitation.create({
+        clientName: nameInput,
+        clientNumber: numberInput,
+        emailInput: emailInput,
+        descriptionInput: descriptionInput
+    }).then(() => {
+        res.redirect("/");
+    });
 })
 
 app.get('/services', (req, res) => {

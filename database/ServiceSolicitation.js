@@ -20,3 +20,5 @@ const ServiceSolicitation = connection.define('tb_serviceSolicitation', {
 ServiceSolicitation.sync({force: false}).then(() => {
     console.log("Tabela Criada");
 });
+
+module.exports = ServiceSolicitation;
