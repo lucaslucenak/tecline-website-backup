@@ -10,6 +10,7 @@ const connection = require('./database/database');
 //Models import
 const serviceSolicitation = require('./database/ServiceSolicitation');
 
+port = process.env.PORT || 9000;
 /*connection
     .authenticate()
     .then(() => {
@@ -67,7 +68,7 @@ app.get('/about', (req, res) => {
     res.render('about.ejs');
 });
 
-app.listen(9000, function(err) {
+app.listen(port, function(err) {
     if(err) {
         console.error(err);
     }
