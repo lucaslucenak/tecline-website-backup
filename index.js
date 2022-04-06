@@ -10,7 +10,8 @@ const connection = require('./database/database');
 //Models import
 const serviceSolicitation = require('./database/ServiceSolicitation');
 
-port = process.env.PORT || 9000;
+const port = process.env.PORT || 9000;
+
 /*connection
     .authenticate()
     .then(() => {
